@@ -3,6 +3,7 @@ sphinx
 
 # Themes and extensions
 sphinx-book-theme
-sphinx_reredirects
+sphinx-reredirects
+
 # Additional Sphinx extensions
 sphinx-autodoc-typehints  # If you're using autodoc with type hints
