@@ -217,7 +217,7 @@ intersphinx_mapping = {
     "openlearners": (openedx_rtd_url("open-edx-learner-guide"), ism_location("open_edx_students")),
     "opendevelopers": (edx_rtd_url("edx-developer-guide"), ism_location("developers")),
     "opendataapi": (edx_rtd_url("edx-data-analytics-api"), None),
-    # "openreleasenotes": (edx_rtd_url("edx-release-notes"), ism_location("release_notes")),
-    # "openengagements": (edx_rtd_url("edx-engagements"), ism_location("engagements")),
-    # "opencommerce": (edx_rtd_url("edx-commerce"), None),
+    "openreleasenotes": (edx_rtd_url("edx-release-notes"), ism_location("release_notes")),
+    "openengagements": (edx_rtd_url("edx-engagements"), ism_location("engagements")),
+    "opencommerce": (edx_rtd_url("edx-commerce"), None),
 }
