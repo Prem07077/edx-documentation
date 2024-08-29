@@ -5,9 +5,7 @@ Welcome to My Project's Documentation
    :maxdepth: 2
    :caption: Contents:
 
-   en_us/contribute/contribute_overview
    en_us/contribute/contributing_guide
-   en_us/course_authors/overview
    en_us/course_authors/authoring_tips
    en_us/course_catalog_api_user_guide/api_overview
    en_us/course_catalog_api_user_guide/api_usage
