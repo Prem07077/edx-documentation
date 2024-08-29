@@ -1,10 +1,9 @@
 # Read the Docs configuration file for Sphinx projects
 # See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
 
-# Required
 version: 2
 
-# Set the OS, Python version and other tools you might need
+# Set the OS, Python version, and other tools you might need
 build:
   os: ubuntu-22.04
   tools:
@@ -18,17 +17,134 @@ build:
 sphinx:
   configuration: docs/conf.py
   # You can configure Sphinx to use a different builder, for instance use the dirhtml builder for simpler URLs
-  # builder: "dirhtml"
+  builder: "dirhtml"
   # Fail on all warnings to avoid broken references
-  # fail_on_warning: true
+  fail_on_warning: true
 
 # Optionally build your docs in additional formats such as PDF and ePub
-# formats:
-#   - pdf
-#   - epub
+formats:
+  - pdf
+  - epub
 
 # Declare the Python requirements required to build your documentation
 # This ensures that Read the Docs installs your dependencies, including sphinx-reredirects
 python:
   install:
     - requirements: docs/requirements.txt
+
+# Consolidated read_docs.yaml
+metadata:
+  title: "EDX Documentation"
+  description: "Centralized documentation for the EDX project."
+
+directories:
+  contribute:
+    title: "Contributing to EDX"
+    description: "Guidelines and instructions for contributing to EDX."
+    content:
+      - file: "contribute/contribute_overview.rst"
+      - file: "contribute/contributing_guide.rst"
+
+  course_authors:
+    title: "Course Authors Guide"
+    description: "Documentation for course authors."
+    content:
+      - file: "course_authors/overview.rst"
+      - file: "course_authors/authoring_tips.rst"
+
+  course_catalog_api_user_guide:
+    title: "Course Catalog API User Guide"
+    description: "Guide for using the course catalog API."
+    content:
+      - file: "course_catalog_api_user_guide/api_overview.rst"
+      - file: "course_catalog_api_user_guide/api_usage.rst"
+
+  data:
+    title: "Data Documentation"
+    description: "Documentation related to data handling and operations."
+    content:
+      - file: "data/data_overview.rst"
+
+  developers:
+    title: "Developer Documentation"
+    description: "Documentation for developers working on EDX."
+    content:
+      - file: "developers/dev_guide.rst"
+
+  discovery_api:
+    title: "Discovery API"
+    description: "Documentation for the Discovery API."
+    content:
+      - file: "discovery_api/api_reference.rst"
+
+  edx_style_guide:
+    title: "EDX Style Guide"
+    description: "Styling guidelines for EDX documentation."
+    content:
+      - file: "edx_style_guide/style_guide.rst"
+
+  enterprise_api:
+    title: "Enterprise API"
+    description: "Documentation for the Enterprise API."
+    content:
+      - file: "enterprise_api/content_assignment_list.rst"
+
+  install_operations:
+    title: "Installation and Operations"
+    description: "Guidelines for installation and operational procedures."
+    content:
+      - file: "install_operations/installation_guide.rst"
+
+  landing_page:
+    title: "Landing Page"
+    description: "Documentation for the landing page."
+    content:
+      - file: "landing_page/landing_page.rst"
+
+  links:
+    title: "Links and References"
+    description: "Documentation for important links and references."
+    content:
+      - file: "links/links_overview.rst"
+
+  olx:
+    title: "OLX Documentation"
+    description: "Documentation related to OLX."
+    content:
+      - file: "olx/olx_guide.rst"
+
+  open_edx_course_authors:
+    title: "Open EDX Course Authors"
+    description: "Documentation for Open EDX course authors."
+    content:
+      - file: "open_edx_course_authors/overview.rst"
+
+  open_edx_release_notes:
+    title: "Open EDX Release Notes"
+    description: "Release notes for Open EDX."
+    content:
+      - file: "open_edx_release_notes/release_notes.rst"
+
+  open_edx_students:
+    title: "Open EDX Students"
+    description: "Documentation for Open EDX students."
+    content:
+      - file: "open_edx_students/students_guide.rst"
+
+  shared:
+    title: "Shared Documentation"
+    description: "Shared resources and documentation."
+    content:
+      - file: "shared/shared_resources.rst"
+
+  students_redirect:
+    title: "Students Redirect"
+    description: "Documentation for students redirection."
+    content:
+      - file: "students_redirect/redirect_info.rst"
+
+  xblock_tutorial:
+    title: "XBlock Tutorial"
+    description: "Tutorial for XBlock."
+    content:
+      - file: "xblock-tutorial/xblock_tutorial.rst"
