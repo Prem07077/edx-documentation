@@ -32,6 +32,12 @@ python:
   install:
     - requirements: docs/requirements.txt
 
+# Ensure to remove metadata if it's causing issues
+# metadata:
+#   title: "EDX Documentation"
+#   description: "Centralized documentation for the EDX project."
+
+# Directories configuration
 directories:
   contribute:
     title: "Contributing to EDX"
