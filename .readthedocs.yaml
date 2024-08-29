@@ -32,11 +32,6 @@ python:
   install:
     - requirements: docs/requirements.txt
 
-# Consolidated read_docs.yaml
-metadata:
-  title: "EDX Documentation"
-  description: "Centralized documentation for the EDX project."
-
 directories:
   contribute:
     title: "Contributing to EDX"
