@@ -8,6 +8,8 @@ build:
 
 sphinx:
   configuration: docs/conf.py  # Update if needed
+sphinx:
+  configuration: en_us/contribute/source/conf.py  
   builder: "html"  # Changed from dirhtml to html for standard output
   fail_on_warning: true
 
