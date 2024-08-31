@@ -7,7 +7,6 @@ from pathlib import Path
 release_line = "master"
 project_version = "latest" if (release_line == "master") else f"open-release-{release_line}.master"
 
-# Check if we are on ReadTheDocs
 # Set the version and release based on the release line
 version = "1.0"  # Short version string, e.g., "1.0"
 release = "1.0.0"  # Full version string, e.g., "1.0.0"
@@ -15,13 +14,16 @@ release = "1.0.0"  # Full version string, e.g., "1.0.0"
 if release_line == "master":
     version = "latest"
     release = "latest"
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
-# Determine the builder
-try:
-    the_builder = sys.argv[sys.argv.index("-b") + 1]
-except ValueError:
-    the_builder = None
+# Ensure that 'version' and 'release' are not empty
+if not version:
+    version = "1.0"  # Fallback value if version is empty
+
+if not release:
+    release = "1.0.0"  # Fallback value if release is empty
+
+# Check if we are on ReadTheDocs
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 # Add the path to the en_us directory
 source_dir = os.path.join(Path.cwd(), 'en_us')
@@ -86,7 +88,7 @@ html_theme_options = {
                 rel="license"
                 href="https://creativecommons.org/licenses/by-sa/4.0/"
             >Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-    """
+    """,
 }
 html_theme_options['navigation_depth'] = 3
 
