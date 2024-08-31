@@ -2,13 +2,17 @@ import datetime
 import os
 import sys
 from pathlib import Path
+import suppress_warnings
+
+
 
 # Define the release line and project version
 release_line = "master"
 project_version = "latest" if (release_line == "master") else f"open-release-{release_line}.master"
 
-version = "11.7.0"
-release = version
+# Define the version and release for your forked documentation
+version = 'latest'  # Indicates that the documentation is for the latest version
+release = 'latest'  # Same as version, or a specific branch/tag name if applicable
 
 # Check if we are on ReadTheDocs
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
@@ -19,7 +23,8 @@ try:
 except ValueError:
     the_builder = None
 
-source_dir = os.path.join(Path.cwd(), 'docs/source')
+# Add the path to the en_us directory
+source_dir = os.path.join(Path.cwd(), 'en_us')
 sys.path.insert(0, source_dir)
 
 # Sphinx configuration
@@ -176,5 +181,8 @@ intersphinx_mapping = {
     # "openengagements": (edx_rtd_url("edx-engagements"), ism_location("engagements")),
     # "opencommerce": (edx_rtd_url("edx-commerce"), None),
 }
-# Suppress warnings for EPUB3 build
+
 suppress_warnings = ['epub.unknown_project_files']
+
+def setup(app):
+    suppress_warnings.setup(app)
