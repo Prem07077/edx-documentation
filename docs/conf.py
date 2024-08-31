@@ -8,6 +8,13 @@ release_line = "master"
 project_version = "latest" if (release_line == "master") else f"open-release-{release_line}.master"
 
 # Check if we are on ReadTheDocs
+# Set the version and release based on the release line
+version = "1.0"  # Short version string, e.g., "1.0"
+release = "1.0.0"  # Full version string, e.g., "1.0.0"
+
+if release_line == "master":
+    version = "latest"
+    release = "latest"
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 # Determine the builder
