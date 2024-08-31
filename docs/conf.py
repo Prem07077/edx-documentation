@@ -2,7 +2,6 @@ import datetime
 import os
 import sys
 from pathlib import Path
-import suppress_warnings
 
 
 
@@ -181,8 +180,3 @@ intersphinx_mapping = {
     # "openengagements": (edx_rtd_url("edx-engagements"), ism_location("engagements")),
     # "opencommerce": (edx_rtd_url("edx-commerce"), None),
 }
-
-suppress_warnings = ['epub.unknown_project_files']
-
-def setup(app):
-    suppress_warnings.setup(app)
