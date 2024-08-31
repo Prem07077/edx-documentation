@@ -1,5 +1,5 @@
 const DOCUMENTATION_OPTIONS = {
-    VERSION: 'Cv18.1.3',
+    VERSION: '11.7.0',
     LANGUAGE: 'en',
     COLLAPSE_INDEX: false,
     BUILDER: 'epub',

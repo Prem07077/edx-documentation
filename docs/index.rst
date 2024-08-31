@@ -9,7 +9,6 @@ Welcome to My Project's Documentation
    en_us/course_authors/authoring_tips
    en_us/course_catalog_api_user_guide/api_overview
    en_us/course_catalog_api_user_guide/api_usage
-   en_us/data/data_overview
    en_us/developers/dev_guide
    en_us/discovery_api/api_reference
    en_us/edx_style_guide/style_guide

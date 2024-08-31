@@ -4,25 +4,22 @@ import sys
 from pathlib import Path
 
 # Define the release line and project version
-release_line = "open-release/redwood.2"  # Updated branch name
-project_version = "Cv18.1.3"  # Updated project version
+release_line = "master"
+project_version = "latest" if (release_line == "master") else f"open-release-{release_line}.master"
 
-# Set the version and release based on the release line
-version = "Cv18.1.3"  # Short version string, e.g., "Cv18.1.3"
-release = "Cv18.1.3"  # Full version string, e.g., "Cv18.1.3"
-
-# Ensure that 'version' and 'release' are not empty
-if not version:
-    version = "Cv18.1.3"  # Fallback value if version is empty
-
-if not release:
-    release = "Cv18.1.3"  # Fallback value if release is empty
+version = "11.7.0"
+release = version
 
 # Check if we are on ReadTheDocs
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
-# Add the path to the en_us directory
-source_dir = os.path.join(Path.cwd(), 'en_us')
+# Determine the builder
+try:
+    the_builder = sys.argv[sys.argv.index("-b") + 1]
+except ValueError:
+    the_builder = None
+
+source_dir = os.path.join(Path.cwd(), 'docs/source')
 sys.path.insert(0, source_dir)
 
 # Sphinx configuration
@@ -56,8 +53,8 @@ html_theme = 'sphinx_book_theme'
 path_to_docs = '/'.join(Path.cwd().parts[-3:])
 
 html_theme_options = {
-    "repository_url": "https://github.com/openedx/edx-documentation",
-    "repository_branch": release_line,  # Updated to branch you are using
+    "repository_url": "https://github.com/Prem07077/edx-documentation",
+    "repository_branch": "master",
     "path_to_docs": path_to_docs,
     "home_page_in_toc": True,
     "use_repository_button": True,
@@ -84,7 +81,7 @@ html_theme_options = {
                 rel="license"
                 href="https://creativecommons.org/licenses/by-sa/4.0/"
             >Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-    """,
+    """
 }
 html_theme_options['navigation_depth'] = 3
 

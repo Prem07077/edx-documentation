@@ -16,5 +16,11 @@
       </navLabel>
       <content src="index.xhtml" />  
     </navPoint>
+    <navPoint id="navPoint2" playOrder="2">
+      <navLabel>
+        <text>API Usage</text>
+      </navLabel>
+      <content src="en_us/course_catalog_api_user_guide/api_usage.xhtml" />  
+    </navPoint>
   </navMap>
 </ncx>

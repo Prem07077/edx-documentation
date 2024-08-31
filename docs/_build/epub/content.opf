@@ -12,9 +12,9 @@
     <dc:publisher>Author name not set</dc:publisher>
     <dc:rights>2024, The Axim Collaborative</dc:rights>
     <dc:identifier id="unknown">unknown</dc:identifier>
-    <dc:date>2024-08-31T04:45:57Z</dc:date>
-    <meta property="dcterms:modified">2024-08-31T04:45:57Z</meta>
-    <meta property="ibooks:version">Cv18.1.3</meta>
+    <dc:date>2024-08-31T05:31:19Z</dc:date>
+    <meta property="dcterms:modified">2024-08-31T05:31:19Z</meta>
+    <meta property="ibooks:version">11.7.0</meta>
     <meta property="ibooks:specified-fonts">true</meta>
     <meta property="ibooks:binding">true</meta>
     <meta property="ibooks:scroll-axis">vertical</meta>
@@ -31,16 +31,24 @@
     <item id="epub-6" href="_static/minus.png" media-type="image/png" />
     <item id="epub-7" href="_static/plus.png" media-type="image/png" />
     <item id="epub-8" href="_static/pygments.css" media-type="text/css" />
-    <item id="epub-9" href="source/another_document.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-10" href="source/introduction.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-11" href="source/other_document.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-9" href="en_us/contribute/contributing_guide.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-10" href="en_us/course_authors/authoring_tips.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-11" href="en_us/course_catalog_api_user_guide/api_overview.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-12" href="en_us/course_catalog_api_user_guide/api_usage.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-13" href="source/another_document.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-14" href="source/introduction.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-15" href="source/other_document.xhtml" media-type="application/xhtml+xml" />
   </manifest>
   <spine toc="ncx" page-progression-direction="ltr">
     <itemref idref="epub-1" />
+    <itemref idref="epub-12" />
     <itemref idref="epub-0" />
     <itemref idref="epub-9" linear="no" />
     <itemref idref="epub-10" linear="no" />
     <itemref idref="epub-11" linear="no" />
+    <itemref idref="epub-13" linear="no" />
+    <itemref idref="epub-14" linear="no" />
+    <itemref idref="epub-15" linear="no" />
   </spine>
   <guide>
     <reference type="toc" title="Table of Contents" href="index.xhtml" />
