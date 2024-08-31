@@ -4,23 +4,19 @@ import sys
 from pathlib import Path
 
 # Define the release line and project version
-release_line = "master"
-project_version = "latest" if (release_line == "master") else f"open-release-{release_line}.master"
+release_line = "open-release/redwood.2"  # Updated branch name
+project_version = "Cv18.1.3"  # Updated project version
 
 # Set the version and release based on the release line
-version = "1.0"  # Short version string, e.g., "1.0"
-release = "1.0.0"  # Full version string, e.g., "1.0.0"
-
-if release_line == "master":
-    version = "latest"
-    release = "latest"
+version = "Cv18.1.3"  # Short version string, e.g., "Cv18.1.3"
+release = "Cv18.1.3"  # Full version string, e.g., "Cv18.1.3"
 
 # Ensure that 'version' and 'release' are not empty
 if not version:
-    version = "1.0"  # Fallback value if version is empty
+    version = "Cv18.1.3"  # Fallback value if version is empty
 
 if not release:
-    release = "1.0.0"  # Fallback value if release is empty
+    release = "Cv18.1.3"  # Fallback value if release is empty
 
 # Check if we are on ReadTheDocs
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
@@ -60,8 +56,8 @@ html_theme = 'sphinx_book_theme'
 path_to_docs = '/'.join(Path.cwd().parts[-3:])
 
 html_theme_options = {
-    "repository_url": "https://github.com/Prem07077/edx-documentation",
-    "repository_branch": "master",
+    "repository_url": "https://github.com/openedx/edx-documentation",
+    "repository_branch": release_line,  # Updated to branch you are using
     "path_to_docs": path_to_docs,
     "home_page_in_toc": True,
     "use_repository_button": True,
